@@ -1,5 +1,5 @@
 # Ecommerce
-Laravel ecommerce project  
+Laravel ecommerce project.
 # How to run  
 To run the project as a developer you should:  
 1. Edit .env file to set the database credentials for example this credentials for xampp localhost:  
