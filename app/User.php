@@ -72,7 +72,8 @@ class User extends Authenticatable
      */
     public function hasRole($role)
     {
-        return in_array($role, $this->getRoles());
+        $roles = str_replace('"', '',  $this->getRoles());
+        return in_array($role, $roles);
     }
 
     /***
