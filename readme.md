@@ -1,4 +1,4 @@
-# ecommerce
+# Ecommerce
 Laravel ecommerce project  
 # How to run  
 To run the project as a developer you should:  
