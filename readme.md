@@ -1,7 +1,7 @@
 # ecommerce
-Laravel ecommerce project
-How to run
-to run the project as a developer you should 
+Laravel ecommerce project  
+# How to run  
+To run the project as a developer you should:
 1. Edit .env file setting the database info
   DB_CONNECTION=mysql
   DB_HOST=127.0.0.1
