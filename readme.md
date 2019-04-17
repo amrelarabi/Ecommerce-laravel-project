@@ -22,7 +22,7 @@ To run the project as a developer you should:
 3. Now you can access the admin area using this credentials:  
   email : admin@ecommerce.com  
   password : admin  
-4. test payment proccess  
+4. Test payment proccess  
   You can test payment process using one of this test cards:  
   https://stripe.com/docs/testing#cards  
   With any email, expire date and CVC.
