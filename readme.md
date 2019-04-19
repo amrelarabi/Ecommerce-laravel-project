@@ -54,4 +54,4 @@ User can:
   ⦁	Increase/decrease the quantity of the same product in the cart  
 ### Payment methods
 #### We implemented the main payment functionality using stripe (https://stripe.com/docs) Which Offers great docs and docs, it accepts the payment of many card such as Visa, Mastercard.  
-#### We also added paypal getway payment method
+#### We also added paypal getway payment method.
