@@ -102,6 +102,17 @@
                                                                   </script>
                                                             </form>
                                                       </span>
+                                                      
+                                                </div>
+                                                <hr>
+                                                <div id="paypal_getway">
+                                                <form class="w3-container w3-display-middle w3-card-4 " method="POST" id="payment-form"  action="{{route('paywithpaypal')}}">
+                                                            {{ csrf_field() }}
+                                                            <p>      
+                                                            <input value="{{Cart::total()}}" class="w3-input w3-border" name="amount" type="hidden"></p>      
+                                                            <button type="submit" id="btn_paypal"><span><i class="fa fa-paypal"></i> pay with paypal</span></button>
+                                                            </p>
+                                                      </form>
                                                 </div>
                                           </div>
 

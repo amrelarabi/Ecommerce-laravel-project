@@ -99,3 +99,10 @@ Route::get('/orders', [
     'as' => 'orders.index'
 ])->middleware('check_user_role:'.\App\Role\UserRole::ROLE_ADMIN);;
 
+
+
+Route::post('/paypal/checkout',[
+    'uses' => 'PaypalController@payWithpaypal',
+    'as' => 'paywithpaypal'
+]);
+
