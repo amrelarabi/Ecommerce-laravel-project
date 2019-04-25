@@ -1,3 +1,4 @@
+rm -rf .git/MERGE*
 # Ecommerce
 Laravel ecommerce project.
 # How to run  
@@ -19,13 +20,10 @@ To run the project as a developer you should:
   Then run  
   php artisan serve  
   To start the server.  
-<<<<<<< HEAD
-=======
   This command create database tables and fields, create dummy products and admin login credentials.   
   Then run  
   php artisan serve  
   To start the server.
->>>>>>> 4eb914ed6b645478356aede140f3a75e1840ea7b
 3. Now you can access the admin area using this credentials:  
   email : admin@ecommerce.com  
   password : admin  
