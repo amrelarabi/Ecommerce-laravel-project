@@ -1,4 +1,3 @@
-rm -rf .git/MERGE*
 # Ecommerce
 Laravel ecommerce project.
 # How to run  
