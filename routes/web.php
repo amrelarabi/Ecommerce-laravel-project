@@ -62,6 +62,10 @@ Route::post('/cart/checkout', [
     'as' => 'cart.checkout'
 ]);
 
+Route::get('/category/{id}', [
+    'uses' => 'FrontEndController@category',
+    'as' => 'product.category'
+]);
 
 Route::resource('products', 'ProductsController');
 Route::resource('categories', 'CategoriesController');

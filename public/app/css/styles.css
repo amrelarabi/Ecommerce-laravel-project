@@ -2278,6 +2278,22 @@ body.author .blog-details-author {
   border-radius: 100%; }
 
 /*------------- #STUNNING-HEADER --------------*/
+#category_menu {
+  padding: 10px 0;
+  margin-top: 100px;
+  background: #E8EBEE;
+}
+#category_menu a,
+#category_menu
+{
+  color: #232F3E;
+}
+#category_menu a.active{
+  font-weight: bold;
+}
+#category_menu a{
+  padding:5px 0 5px 10px;
+}
 .stunning-header {
   padding: 125px 0;
   background-position: center center; }

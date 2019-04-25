@@ -75,11 +75,28 @@
             </ul>
             
         </div>
-
+       
     </div>
 
 </header>
-
+<div id="category_menu">
+    <div class="container">
+        <nav class="nav">
+            @if(Request::route()->getName() == 'index')
+                <a class="nav-link active" href="/">All Categories</a>
+            @else
+                <a class="nav-link" href="/">All Categories</a>
+            @endif
+            @foreach($categories as $category)
+                @if(request()->id ==  $category->id)
+                    <a class="nav-link active" href="{{route('product.category', $category->id)}}">{{ $category->name }}</a>
+                @else
+                    <a class="nav-link" href="{{route('product.category', $category->id)}}">{{ $category->name }}</a>
+                @endif
+            @endforeach
+        </nav>
+    </div>
+</div>
 
 <div class="content-wrapper">
 

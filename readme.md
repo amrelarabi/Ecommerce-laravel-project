@@ -15,17 +15,10 @@ To run the project as a developer you should:
   cd path_to_your_project_file  
   Then run  
   php artisan migrate --seed  
-<<<<<<< HEAD
   This command create database tables and fields, create dummy products and admin login credentials.  
   Then run  
   php artisan serve  
   To start the server.  
-=======
-  This command create database tables and fields, create dummy products and admin login credentials.   
-  Then run  
-  php artisan serve  
-  To start the server.
->>>>>>> a00a9def49abe51f424a78bae85f96356d8f8b2c
 3. Now you can access the admin area using this credentials:  
   email : admin@ecommerce.com  
   password : admin  
