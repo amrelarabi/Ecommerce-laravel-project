@@ -110,3 +110,8 @@ Route::post('/paypal/checkout',[
     'as' => 'paywithpaypal'
 ]);
 
+
+Route::any('/search', [
+    'uses' => 'FrontEndController@search',
+    'as' => 'product.search'
+]);

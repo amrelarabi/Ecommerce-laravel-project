@@ -37,7 +37,16 @@
     <div class="container">
 
         <div class="header-content-wrapper">
-
+            <form action="{{ route('product.search') }}" method="POST" role="search" id="search">
+                {{ csrf_field() }}
+                <div class="input-group">
+                    <input type="text" class="form-control" id="search_input" name="q" placeholder="Search products"> <span class="input-group-btn">
+                    <button type="submit" class="btn btn-default btn-search">
+                        <i class="fa fa-search"></i>
+                    </button>
+                    </span>
+                </div>
+            </form>
             <ul class="nav-add">
                
                 <li class="cart">
