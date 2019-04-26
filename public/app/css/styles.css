@@ -2281,11 +2281,26 @@ body.author .blog-details-author {
   font-style: italic;
 }
 /*------------- #STUNNING-HEADER --------------*/
+#logo{
+  display: inline-block;
+  margin-right: 70px;
+  float: left;
+}
+#logo h4 {
+  font-size: 22px;
+  padding-top: 15px;
+}
+#logo h4, #logo p{
+  display: inline-block
+}
 .login{
   margin-right: 20px;
   position: relative;
   bottom: 5px;
   font-size: 18px;
+}
+.all-categories{
+  padding:0 !important;
 }
 .login i{
   margin-left: 0;
