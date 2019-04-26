@@ -48,7 +48,20 @@
                 </div>
             </form>
             <ul class="nav-add">
-               
+                @if (Auth::check())
+                    <li class="login">
+                        <span>Hello {{ Auth::user()->name }}</span>
+                        <a href="{{ url('/logout') }}" onclick="event.preventDefault();
+                        document.getElementById('logout-form').submit();">Logout <i class="fa fa-sign-out home-icon"></i></a>
+                        <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                            {{ csrf_field() }}
+                        </form>
+                    </li>
+                @else
+                    <li class="login">
+                        <a href="{{route('user.login')}}">Login <i class="fa fa-sign-in home-icon"></i></a>
+                    </li>
+                @endif
                 <li class="cart">
 
                     <a href="#" class="js-cart-animate">
@@ -69,18 +82,7 @@
                     </div>
 
                 </li>
-                <li><a href="/"><i class="fa fa-home home-icon"></i></a></li>
-                @if (Auth::check())
-                <li>
-                    <a href="{{ url('/logout') }}" onclick="event.preventDefault();
-                    document.getElementById('logout-form').submit();"><i class="fa fa-sign-out home-icon"></i></a>
-                    <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
-                        {{ csrf_field() }}
-                    </form>
-                </li>
-                @else
-                    <a href="{{route('user.login')}}"><i class="fa fa-sign-in home-icon"></i></a>
-                @endif
+               
             </ul>
             
         </div>

@@ -2281,6 +2281,16 @@ body.author .blog-details-author {
   font-style: italic;
 }
 /*------------- #STUNNING-HEADER --------------*/
+.login{
+  margin-right: 20px;
+  position: relative;
+  bottom: 5px;
+  font-size: 18px;
+}
+.login i{
+  margin-left: 0;
+  font-size: 17px;
+}
 #no_results{
 }
 #search{
