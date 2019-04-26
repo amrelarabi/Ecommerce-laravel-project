@@ -33,7 +33,7 @@ To run the project as a developer you should:
 # About the project
 ## Main parts  
   ⦁	Registration system  
-  ⦁	CRUD of product and categories  
+  ⦁	CRUD of products and categories  
   ⦁	Dashboard of admin  
   ⦁	Shopping cart  
   ⦁	Payment methods  
