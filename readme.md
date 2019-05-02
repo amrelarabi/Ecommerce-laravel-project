@@ -1,5 +1,6 @@
 # Ecommerce
 Laravel ecommerce project.
+We have also impemented the project using asp.net core c# at : https://github.com/Muhammad-Ibrahiem-Abdelhameed/E-Commerce-Website/blob/master/ECommerce.sln
 # How to run  
 To run the project as a developer you should:  
 1. Edit .env file to set the database credentials for example this credentials for xampp localhost:  
