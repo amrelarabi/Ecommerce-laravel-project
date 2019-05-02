@@ -24,6 +24,9 @@
                         <div class="product-details-info">
                               <div class="product-details-info-price">${{ $product->price }}</div>
                               <h3 class="product-details-info-title">{{ $product->name }}</h3>
+                              @for ($i = 0; $i < 5; ++$i)
+                                    <i class="fa fa-star{{ $product..->rate<=$i?'-o':'' }}" aria-hidden="true"></i>
+                              @endfor
                               @if(!empty($product->category))
                                <p class="product-details-info-category">{{ $product->category->name }}
                               @endif
