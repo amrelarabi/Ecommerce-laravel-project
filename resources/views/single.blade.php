@@ -24,8 +24,11 @@
                         <div class="product-details-info">
                               <div class="product-details-info-price">${{ $product->price }}</div>
                               <h3 class="product-details-info-title">{{ $product->name }}</h3>
+                           
                               @for ($i = 0; $i < 5; ++$i)
-                                    <i class="fa fa-star{{ $product..->rate<=$i?'-o':'' }}" aria-hidden="true"></i>
+                              <a href="#" class="rate_star" data-rate={{$i+1}} data-product={{$product->id}} onclick="rateStar(event, this)">
+                                    <i class="fa fa-star{{ $rate_value<=$i?'-o':'' }}" aria-hidden="true" ></i>
+                              </a>
                               @endfor
                               @if(!empty($product->category))
                                <p class="product-details-info-category">{{ $product->category->name }}

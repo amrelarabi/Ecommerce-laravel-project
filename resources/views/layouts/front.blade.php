@@ -3,6 +3,8 @@
 <head lang="en">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
+
     <title>Ecommerce - Project</title>
 
     <link rel="stylesheet" type="text/css" href="{{ asset('app/css/fonts.css') }}">
@@ -18,7 +20,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('app/css/swiper.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('app/css/primary-menu.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('app/css/magnific-popup.css') }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('app/css/toastr.min.css') }}">
     <!--Styles for RTL-->
 
     <!--<link rel="stylesheet" type="text/css" href="{{ asset('app/css/rtl.css') }}">-->
@@ -26,7 +28,8 @@
     <!--External fonts-->
 
     <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
-
+    <script src = "{{ asset('app/js/jquery.min.js') }}"></script>
+    <script src="{{ asset('app/js/ajax.js') }}"></script>
 </head>
 
 
@@ -139,7 +142,6 @@
 
 
 
-<script src="{{ asset('app/js/jquery-2.1.4.min.js') }}"></script>
 <script src="{{ asset('app/js/crum-mega-menu.js') }}"></script>
 <script src="{{ asset('app/js/swiper.jquery.min.js') }}"></script>
 <script src="{{ asset('app/js/theme-plugins.js') }}"></script>
@@ -149,7 +151,7 @@
 <script src="{{ asset('app/js/velocity.min.js') }}"></script>
 <script src="{{ asset('app/js/ScrollMagic.min.js') }}"></script>
 <script src="{{ asset('app/js/animation.velocity.min.js') }}"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<script src="{{ asset('app/js/toastr.min.js') }}"></script>
 <!-- ...end JS Script -->
 
 <script>

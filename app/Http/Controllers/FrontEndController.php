@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Product;
 use App\Category;
 use Illuminate\Http\Request;
+use App\Rate;
 
 class FrontEndController extends Controller
 {
@@ -15,7 +16,11 @@ class FrontEndController extends Controller
 
     public function singleProduct($id)
     {
-        return view('single', ['product' => Product::find($id)]);
+        $rates_count = Rate::where([['product_id','=', $id]])->count();
+        $rates_value = Rate::where([['product_id','=', $id]])->sum('rate');
+        $rate_value = ceil($rates_value/ $rates_count);
+        
+        return view('single', ['product' => Product::find($id), 'rate_value'=>$rate_value]);
     }
     public function category($id)
     {

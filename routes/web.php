@@ -115,3 +115,8 @@ Route::any('/search', [
     'uses' => 'FrontEndController@search',
     'as' => 'product.search'
 ]);
+
+Route::get('ajax',function() {
+    return view('message');
+ });
+ Route::post('/rate','AjaxController@rate');
