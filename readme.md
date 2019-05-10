@@ -3,7 +3,12 @@ Laravel ecommerce project.
 We have also impemented the project using asp.net core c# at : https://github.com/Muhammad-Ibrahiem-Abdelhameed/E-Commerce-Website/blob/master/ECommerce.sln
 # How to run  
 To run the project as a developer you should:  
-1. Edit .env file to set the database credentials for example this credentials for xampp localhost:  
+1. Create file and name it .env
+copy the contents of this file https://github.com/laravel/laravel/blob/master/.env.example
+to your .env file then run this command : 
+ php artisan key:generate 
+ to generate key to your project
+ Edit .env file to set the database credentials for example this credentials for xampp localhost:  
   DB_CONNECTION=mysql  
   DB_HOST=127.0.0.1  
   DB_PORT=3306  
