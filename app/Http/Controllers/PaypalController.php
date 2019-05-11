@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use Session;
+use Cart;
+use Auth;
+use App\Order;
+
 use Illuminate\Http\Request;
 use PayPal\Rest\ApiContext;
 use PayPal\Auth\OAuthTokenCredential;
@@ -45,8 +49,8 @@ class PaypalController extends Controller
                     ->setItemList($item_list)
                     ->setDescription('Your transaction description');
         $redirect_urls = new RedirectUrls();
-                $redirect_urls->setReturnUrl(route('products.index')) /** Specify return URL **/
-                    ->setCancelUrl(route('products.index') );
+                $redirect_urls->setReturnUrl(route('paypal.record')) /** Specify return URL **/
+                    ->setCancelUrl(route('paypal.cancel') );
         $payment = new Payment();
                 $payment->setIntent('Sale')
                     ->setPayer($payer)
@@ -96,9 +100,30 @@ class PaypalController extends Controller
                 $result = $payment->execute($execution, $this->_api_context);
         if ($result->getState() == 'approved') {
         \Session::put('success', 'Payment success');
-                    return redirect()->route('/');
+                    return redirect()->route('index');
         }
         \Session::put('error', 'Payment failed');
-                return redirect()->route('/');
+                return redirect()->route('index');
         }    
+        public function paypalRecord(){
+                $items = Cart::content();
+                $userId = Auth::id(); 
+                foreach($items as $item){
+                        $order = new Order;
+                        $order->product_id = $item->id;
+                        $order->amount = $item->qty;
+                        $order->user_id = $userId;
+                        $order->save();
+                }
+                
+                Session::flash('success', 'Purchase successfull. wait for our email.');
+
+                Cart::destroy();
+                return redirect()->route('index');
+
+        }
+        public function paypalCancel(){
+                return redirect()->route('index');
+
+        }
 }

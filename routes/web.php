@@ -62,6 +62,14 @@ Route::post('/cart/checkout', [
     'as' => 'cart.checkout'
 ]);
 
+Route::get('/paypal/record', [
+    'uses' => 'PaypalController@paypalRecord',
+    'as' => 'paypal.record'
+]);
+Route::get('/paypal/cancel', [
+    'uses' => 'PaypalController@paypalCancel',
+    'as' => 'paypal.cancel'
+]);
 Route::get('/category/{id}', [
     'uses' => 'FrontEndController@category',
     'as' => 'product.category'

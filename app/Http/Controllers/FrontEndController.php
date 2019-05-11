@@ -18,8 +18,11 @@ class FrontEndController extends Controller
     {
         $rates_count = Rate::where([['product_id','=', $id]])->count();
         $rates_value = Rate::where([['product_id','=', $id]])->sum('rate');
-        $rate_value = ceil($rates_value/ $rates_count);
-        
+        if($rates_value > 0){
+            $rate_value = ceil($rates_value/ $rates_count);
+        }else{
+            $rate_value = 0;
+        }
         return view('single', ['product' => Product::find($id), 'rate_value'=>$rate_value]);
     }
     public function category($id)

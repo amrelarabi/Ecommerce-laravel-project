@@ -15,7 +15,11 @@ to your .env file then run this command :
   DB_DATABASE=ecommerce  
   DB_USERNAME=root  
   DB_PASSWORD=  
-2. Run migrate and seeding command:   
+Where ecommerce is database name   
+2. Run   
+  composer install 
+  then run
+  Run migrate and seeding command:   
   Open your CMD in windows write this command  
   run  
   cd path_to_your_project_file  
