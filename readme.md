@@ -16,21 +16,21 @@ to your .env file then run this command :
   DB_PASSWORD=  
 Where ecommerce is database name   
 2. Run   
-  composer install 
+  <code>composer install </code>
   then run
   Run migrate and seeding command:   
   Open your CMD in windows write this command  
   run  
-  cd path_to_your_project_file  
+  <code>cd path_to_your_project_file</code>  
   Then run  
-  php artisan migrate --seed  
+  <code>php artisan migrate --seed </code>
   This command create database tables and fields, create dummy products and admin login credentials.  
   Then run  
-  php artisan serve  
+  <code>php artisan serve </code>
   To start the server.  
   This command create database tables and fields, create dummy products and admin login credentials.   
   Then run  
-  php artisan serve  
+  <code>php artisan serve</code>
   To start the server.
 3. Now you can access the admin area using this credentials:  
   email : admin@ecommerce.com  
