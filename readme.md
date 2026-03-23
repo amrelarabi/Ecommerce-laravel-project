@@ -1,5 +1,13 @@
-# Ecommerce
-Laravel ecommerce project.
+# Laravel E-commerce Backend API
+
+Backend system for managing products, orders, and e-commerce workflows using Laravel.
+
+Features
+Authentication
+Product management
+Cart and orders
+RESTful APIs
+Scalable structure
 # How to run  
 To run the project as a developer you should:  
 1. Create file and name it .env
