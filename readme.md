@@ -1,74 +1,75 @@
 # Laravel E-commerce Backend API
 
-Backend system for managing products, orders, and e-commerce workflows using Laravel.
+A scalable e-commerce backend system built with Laravel, focusing on API-driven architecture, payment processing, and business logic.
 
-Features
-Authentication
-Product management
-Cart and orders
-RESTful APIs
-Scalable structure
-# How to run  
-To run the project as a developer you should:  
-1. Create file and name it .env
-copy the contents of this file https://github.com/laravel/laravel/blob/master/.env.example
-to your .env file then run this command : 
- php artisan key:generate 
- to generate key to your project
- Edit .env file to set the database credentials for example this credentials for xampp localhost:  
-  DB_CONNECTION=mysql  
-  DB_HOST=127.0.0.1  
-  DB_PORT=3306  
-  DB_DATABASE=ecommerce  
-  DB_USERNAME=root  
-  DB_PASSWORD=  
-Where ecommerce is database name   
-2. Run   
-  <code>composer install </code>
-  then run
-  Run migrate and seeding command:   
-  Open your CMD in windows write this command  
-  run  
-  <code>cd path_to_your_project_file</code>  
-  Then run  
-  <code>php artisan migrate --seed </code>
-  This command create database tables and fields, create dummy products and admin login credentials.  
-  Then run  
-  <code>php artisan serve </code>
-  To start the server.  
-  This command create database tables and fields, create dummy products and admin login credentials.   
-  Then run  
-  <code>php artisan serve</code>
-  To start the server.
-3. Now you can access the admin area using this credentials:  
-  email : admin@ecommerce.com  
-  password : admin  
-4. Test payment proccess  
-  You can test payment process using one of this test cards:  
-  https://stripe.com/docs/testing#cards  
-  With any email, expire date and CVC.
-# About the project
-## Main parts  
-  ⦁	Registration system  
-  ⦁	CRUD of products and categories  
-  ⦁	Dashboard of admin  
-  ⦁	Shopping cart  
-  ⦁	Payment methods  
-### Registration system  
-The system allows users to:  
-  ⦁	creating their own accounts with their names and emails with default role as user.  
-  ⦁	user can no access the admin area only users can access the frontend.  
-  ⦁	Add products to cart and checkout.  
-### CRUD of products and categories  
-In admin area admin can Create, read, update and delete of products and categories.  
-### Dashboard of admin  
-In admin area the admin can see the orders with their details such as products, quantities, Date of order and so on.  
-Admin can also see some statistics such as the number of orders, products, registered customers, most viewed products/categories, conversion rate (number of orders/ number of views) of products and so on.  
-### Shopping cart  
-The shopping cart functionality is essential part of the frontend of the system, We implemented it using sessions.   
-User can:   
-  ⦁	Add/remove product to/from the cart  
-  ⦁	Increase/decrease the quantity of the same product in the cart  
-### Payment methods
-#### We implemented the main payment functionality using stripe (https://stripe.com/docs) Which Offers great docs and docs, it accepts the payment of many card such as Visa, Mastercard.  
-#### We also added paypal getway payment method.
+## Key Features
+
+- Authentication system (user & admin roles)
+- Product and category management
+- Shopping cart and order processing
+- RESTful API design
+- Payment integration (Stripe, PayPal)
+- Admin dashboard with order tracking and statistics
+- Session-based cart handling
+- Database seeding for demo data
+
+## Tech Stack
+
+- PHP (Laravel)
+- MySQL
+- REST APIs
+- Stripe API
+- PayPal API
+
+## Project Highlights
+
+- Designed modular backend architecture for scalability
+- Implemented full e-commerce workflow (cart → checkout → payment → order)
+- Integrated real-world payment gateways with test environment
+- Built API-first structure for frontend/mobile integration
+- Optimized database interactions and relationships
+
+## How to Run
+
+1. Clone the repository
+git clone https://github.com/amrelarabi/Ecommerce-laravel-project.git
+
+cd Ecommerce-laravel-project
+
+2. Install dependencies
+composer install
+
+4. Setup environment
+cp .env.example .env
+php artisan key:generate
+
+6. Configure database in .env
+DB_DATABASE=ecommerce
+DB_USERNAME=root
+DB_PASSWORD=
+
+7. Run migrations and seed data
+php artisan migrate --seed
+
+8. Start the server
+php artisan serve
+
+Open in browser
+http://127.0.0.1:8000
+
+Admin Access
+Email admin@ecommerce.com
+
+Password admin
+
+## Demo Credentials
+
+Admin login:
+
+- Email: admin@ecommerce.com  
+- Password: admin  
+
+## Payment Testing
+
+Use Stripe test cards:  
+https://stripe.com/docs/testing#cards
